@@ -6,8 +6,6 @@
   "scripts": {
     "start": "set PORT=3000 && node index.js",
     "dev": "set PORT=3000 && nodemon --inspect index.js",
-    "uno": "set PORT=3001 && nodemon  seruno.js",
-    "dos": "set PORT=3002 && nodemon  serdos.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",

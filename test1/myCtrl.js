@@ -11,11 +11,11 @@ const colorCtrl = {
         }
     },
     getRed : (req, res) => {
-        setTimeout(()=>{
-            res.sendStatus(400) 
-        }, 3000);
-        
-
+        try {
+            res.send("ok")
+        } catch (error) {
+            res.status(500).send(error)
+        }
     }
 }
 
