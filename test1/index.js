@@ -13,15 +13,12 @@ app.use(express.json())
 
 app.use(myMid)
 
-app.use('/api', colorRouter)
+app.use(colorRouter)
 
 
 const runtime = app.listen(port,()=>{
   console.log("Runing on port: "+port)  
 })
-
-
-
 runtime.on('error', (err)=>{
     console.log(err)
 })

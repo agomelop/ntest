@@ -3,25 +3,18 @@ const express = require('express')
 const router = express.Router()
 
 const colorCtrl = {
-    getGreen : (req, res) => {
-        try {
-            res.send("ok")
-        } catch (error) {
-            res.status(500).send(error)
-        }
+    getOk : (req, res) => {
+        res.sendStatus(200)
     },
-    getRed : (req, res) => {
-        try {
-            res.send("ok")
-        } catch (error) {
-            res.status(500).send(error)
-        }
+    others : (req, res) => {
+         res.sendStatus(404)
     }
 }
 
-
-router.get('/green', colorCtrl.getGreen);
-router.get('/red', colorCtrl.getRed);
+router.get('/green', colorCtrl.getOk);
+router.get('/red', colorCtrl.getOk);
+router.get('/blue', colorCtrl.getOk);
+router.get('/*', colorCtrl.others);
 
 
 module.exports = router
